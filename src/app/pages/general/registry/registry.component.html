@@ -1,0 +1,48 @@
+<div class="container-wrapper">
+    <h1>Registry</h1>
+    <div class="tab-wrapper">
+        <kendo-tabstrip>
+            <kendo-tabstrip-tab title="Assets" [selected]="true">
+              <ng-template kendoTabContent>
+                <kendo-grid 
+                    [data]="gridData"
+                    kendoGridSelectBy="id"
+                    [selectable]="{ mode: 'multiple', drag: true }"
+                    [pageSize]="20"
+                    [pageable]="true"
+                    [sortable]="true"
+                    [reorderable]="true"
+                    [resizable]="true"
+                    [height]="500"
+                    [columnMenu]="{ filter: true }"
+                    >
+                    <kendo-grid-column field="assetName" title="Asset Name"> </kendo-grid-column>
+                    <kendo-grid-column field="fund" title="Fund"> </kendo-grid-column>
+                    <kendo-grid-column field="sector" title="Sector">
+                    </kendo-grid-column>
+                    <kendo-grid-column field="division" title="NCREIF Division"> </kendo-grid-column>
+                    <kendo-grid-column field="assetStatus" title="Asset Status"> </kendo-grid-column>
+                    <kendo-grid-column field="deal" title="Deal Stage"> </kendo-grid-column>
+                    <kendo-grid-column field="lifecycle" title="Lifecycle Status"> </kendo-grid-column>
+                    <kendo-grid-column field="risk" title="Risk Profile"> </kendo-grid-column>
+                    <kendo-grid-column field="acquisition" title="Acquisition Date"> </kendo-grid-column>
+                    <kendo-grid-column field="disclosure" title="Disclosure Date"> </kendo-grid-column>
+                    <kendo-grid-column field="building" title="Building Size"> </kendo-grid-column>
+                    <kendo-grid-column field="land" title="Land Size"> </kendo-grid-column>
+                  </kendo-grid>
+              </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="Properties" >
+              <ng-template kendoTabContent>
+                <p>Contacts</p>
+              </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="Financial Entities" >
+                <ng-template kendoTabContent>
+                  <p>Contacts</p>
+                </ng-template>
+              </kendo-tabstrip-tab>
+          </kendo-tabstrip>
+    </div>
+</div>
+
