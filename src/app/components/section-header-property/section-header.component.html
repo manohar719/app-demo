@@ -1,0 +1,34 @@
+<div class="section-wrapper-container">
+    <kendo-tabstrip>
+        <kendo-tabstrip-tab title="Buildings" [selected]="true">
+          <ng-template kendoTabContent>
+            <div class="section-heading">
+                <h3>Buildings</h3>
+                <a href="#"><kendo-svg-icon [icon]="envelopIcon"></kendo-svg-icon>Email Fund Ops</a>
+            </div>
+            <div class="action-button">
+                <div class="action-text">
+                    <p>Buildings: <span>2</span></p>
+                    <p>BTotal Gross Size: <span> 688,255 SF</span></p>
+                    <p>Total Net Size: <span>688,255 SF</span></p>       
+                </div>
+                <div class="action-btn-group">
+                    <button kendoButton [svgIcon]="exportIcon" class="cr-default">Export</button>
+                    <button kendoButton [svgIcon]="tableIcon" class="cr-default"></button>
+                    <button kendoButton [svgIcon]="listOrderIcon" class="cr-default"></button>
+                </div>
+                
+            </div>
+            <app-entity-card-building />
+            <app-entity-card-building />
+          </ng-template>
+        </kendo-tabstrip-tab>
+        <kendo-tabstrip-tab title="Contacts" >
+          <ng-template kendoTabContent>
+            <p>Contacts</p>
+          </ng-template>
+        </kendo-tabstrip-tab>
+      </kendo-tabstrip>
+
+</div>
+

@@ -1,0 +1,14 @@
+<header>
+    <span class="logo"><kendo-svg-icon [icon]="logo"></kendo-svg-icon><i>Asset Central</i></span>
+    <nav>
+      <span>Registry</span>
+      <!-- <kendo-svg-icon [icon]="arrowRight"></kendo-svg-icon> -->
+    </nav>
+    <div class="search-input">
+        <div class="search-box">
+            <kendo-autocomplete placeholder="Find any asset or property" [data]="groupedData" valueField="name">
+            </kendo-autocomplete>
+            <kendo-svg-icon [icon]="searchIcon"></kendo-svg-icon>
+        </div>
+    </div>
+</header>

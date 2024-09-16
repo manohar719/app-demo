@@ -1,0 +1,102 @@
+.home-banner-wrapper{
+    background: #4E455F;
+    padding: 1rem;
+    * {
+        color: #fff;
+    }
+    
+    h1{
+        margin-bottom: 1rem;
+        margin-top: 0.4rem;
+        font-size: 35px;
+    }
+    .section-header{
+        margin-bottom: 1rem;
+        border-bottom: 1px solid;
+        position: relative;
+    }
+    .br-white-bottom{
+        border-bottom: 1px solid #fff;
+    }
+    .action-right-btn{
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+    .row-content{
+        width: 33%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sub-section-header{
+        position: relative;
+    }
+    .section-btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        color: #000;
+        background-color: #EBC87A;
+    }
+    .para-section{
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+        &.w-50{
+
+            width: 45%;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        &.w-25{
+            width: 25%;
+            display: inline-block;
+            vertical-align: bottom;
+            float: left;
+        }
+        &.w-30{
+            width: 30%;
+            display: inline-block;
+            vertical-align: bottom;
+            float: left;
+        }
+        h6{
+            font-weight: 300;
+            font-size: 16px;
+            font-family: 'Roboto';
+            a{
+                color: #EBC87A;
+            }
+        }   
+        p{
+            font-size: 12px;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            font-family: 'Roboto';
+        }
+    }
+    .map-section{
+        width: 29%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sub-section-wrapper{
+        width: 70%;
+        display: inline-block;
+        vertical-align: top;
+        
+        h3{
+            font-size: 25px;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            font-family: 'Roboto';
+        }
+    }
+    .mg-bottom-1{
+        margin-bottom: 1rem;
+    }
+}
