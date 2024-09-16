@@ -1,0 +1,80 @@
+.cr-green{
+    background-color: #59823D;
+    color: #fff;
+}
+.entity-card-wrapper{
+    margin-bottom: 1rem;
+}
+.title-header{
+    padding: 0.7rem;
+    background-color: #4E455F;
+    position: relative;
+    &.bg-green{
+        background-color: #225D68;
+    }
+    h4{
+        display: inline-block;
+        padding-left: 0.2rem;
+        color: #fff;
+        kendo-svg-icon{
+            width: 20px;
+            height: 20px;
+        }
+        a{
+            color: #EBC87A;
+            padding-left: 0.3rem;
+        }
+    }
+    .action-right{
+        position: absolute;
+        right: 2px;
+        top: 5px;
+        p{
+            display: inline-block;
+            margin-right: 0.3rem;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+}
+.title-content{
+    padding: 1rem;
+    border: 1px solid #4E455F;
+    h4{
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+    }
+}
+.row-content{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0.5rem;
+    &.no-width{
+        width: auto;
+    }
+    &.w-18{
+        width: 18%;
+    }
+}
+
+.para-section{
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    vertical-align: bottom;
+    &.w-50{
+        width: 45%;
+        display: inline-block;
+    }
+    h6{
+        font-weight: 300;
+        font-size: 14px;
+    }   
+    p{
+        font-size: 12px;
+        margin-bottom: 0.3rem
+    }
+}

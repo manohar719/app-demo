@@ -1,0 +1,59 @@
+.home-banner-wrapper{
+    background: #244366;
+    padding: 1rem;
+    * {
+        color: #fff;
+    }
+    
+    h1{
+        margin-bottom: 1rem;
+        margin-top: 0.4rem;
+        font-size: 35px;
+    }
+    .section-header{
+        margin-bottom: 1rem;
+        border-bottom: 1px solid;
+        position: relative;
+    }
+    .br-white-bottom{
+        border-bottom: 1px solid #fff;
+    }
+    .action-right-btn{
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+    .para-section{
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-right: 1.8rem;
+        margin-bottom: 1rem;
+        h6{
+            font-weight: 300;
+            font-size: 16px;
+        }   
+        p{
+            font-size: 12px;
+            margin-bottom: 0.3rem
+        }
+    }
+    .map-section{
+        width: 29%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sub-section-wrapper{
+        width: 70%;
+        display: inline-block;
+        vertical-align: top;
+        
+        h3{
+            font-size: 25px;
+            margin-bottom: 1rem;
+        }
+    }
+    .mg-bottom-1{
+        margin-bottom: 1rem;
+    }
+}
