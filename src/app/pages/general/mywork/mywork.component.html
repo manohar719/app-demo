@@ -1,0 +1,136 @@
+<div class="work-wrapper">
+  <h2>My Work</h2>
+  <app-task-card />
+
+  <kendo-tabstrip>
+
+    <!-- My Properties Tab Start -->
+    <kendo-tabstrip-tab title="My Properties" [selected]="true">
+      <ng-template kendoTabContent>
+
+        <div class="k-radio-list k-list-horizontal">
+          <p>Deal Stage :</p>
+          <p>
+            <kendo-radiobutton #checked value="Any" [(ngModel)]="radio1.layout"></kendo-radiobutton>
+            <kendo-label class="k-radio-label" [for]="checked" text="Any"></kendo-label>
+          </p>
+
+          <p>
+            <kendo-radiobutton #unchecked value="Deals Formally Presented"
+              [(ngModel)]="radio1.layout"></kendo-radiobutton>
+            <kendo-label class="k-radio-label" [for]="unchecked" text="Deals Formally Presented"></kendo-label>
+          </p>
+
+          <p>
+            <kendo-radiobutton #unchecked value="Formally Presented" [(ngModel)]="radio1.layout"></kendo-radiobutton>
+            <kendo-label class="k-radio-label" [for]="unchecked" text="Formally Presented"></kendo-label>
+          </p>
+
+          <p>
+            <kendo-radiobutton #unchecked value="Allocated" [(ngModel)]="radio1.layout"></kendo-radiobutton>
+            <kendo-label class="k-radio-label" [for]="unchecked" text="Allocated"></kendo-label>
+          </p>
+
+          <p>
+            <kendo-radiobutton #unchecked value="Closed" [(ngModel)]="radio1.layout"></kendo-radiobutton>
+            <kendo-label class="k-radio-label" [for]="unchecked" text="Closed"></kendo-label>
+          </p>
+        </div>
+        <kendo-grid [kendoGridBinding]="gridView" [pageable]="true" [pageSize]="5" [sortable]="true">
+
+          <kendo-grid-column title="" [width]="60">
+            <ng-template kendoGridCellTemplate>
+              <!-- <div class="action-right"> -->
+              <button kendoButton [svgIcon]="pencilIcon" class="cr-green"></button>
+              <!-- </div> -->
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column field="property_name" title="Property Name"> </kendo-grid-column>
+          <kendo-grid-column field="deal_stage" title="Deal Stage"> </kendo-grid-column>
+          <kendo-grid-column field="asset_status" title="Asset Status"> </kendo-grid-column>
+          <kendo-grid-column field="field_1" title="field 1"> </kendo-grid-column>
+          <kendo-grid-column field="field_2" title="field 2"> </kendo-grid-column>
+          <kendo-grid-column field="field_3" title="field 3"> </kendo-grid-column>
+          <kendo-grid-column field="field_4" title="field 4"> </kendo-grid-column>
+          <kendo-grid-column field="field_5" title="field 5"> </kendo-grid-column>
+          <kendo-grid-column field="field_6" title="field 6"> </kendo-grid-column>
+          <kendo-grid-column field="field_7" title="field 7"> </kendo-grid-column>
+        </kendo-grid>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <!-- My Properties Tab End -->
+
+    <kendo-tabstrip-tab title="My Assets">
+      <ng-template kendoTabContent>
+        <p>Tab 2 Content</p>
+      </ng-template>
+    </kendo-tabstrip-tab>
+
+    <!-- My Task Tab Start -->
+    <kendo-tabstrip-tab title="My Tasks">
+      <ng-template kendoTabContent>
+
+        <kendo-grid [kendoGridBinding]="gridView3" [pageable]="true" [pageSize]="5" [sortable]="true">
+          <kendo-grid-column>
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <button kendoButton themeColor="warning" class="badge badge-danger">NEW</button>
+              <!-- <span
+              *ngIf="dataItem.closed_date < dataItem.deadline"
+              class="badge badge-danger"
+              >1 OVERDUE</span
+            > -->
+            </ng-template>
+          </kendo-grid-column>
+
+          <kendo-grid-column field="deadline" title="Deadline"> </kendo-grid-column>
+          <kendo-grid-column field="property_name" title="Property Name"> </kendo-grid-column>
+          <kendo-grid-column field="task" title="Task"> </kendo-grid-column>
+
+          <kendo-grid-column field="action" title="Action" [width]="220">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <button kendoGridEditCommand [primary]="true">{{ dataItem.action }}</button>
+            </ng-template>
+          </kendo-grid-column>
+
+          <kendo-grid-column field="deal_stage" title="Deal Stage"> </kendo-grid-column>
+          <kendo-grid-column field="closed_date" title="Closed Date"> </kendo-grid-column>
+
+        </kendo-grid>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <!-- My Task Tab End -->
+
+    <!-- Team Task Tab start-->
+    <kendo-tabstrip-tab title="Team Tasks">
+      <ng-template kendoTabContent>
+        <kendo-grid [kendoGridBinding]="gridView4" [pageable]="true" [pageSize]="5" [sortable]="true">
+          <kendo-grid-column>
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <button kendoButton themeColor="error" class="badge badge-danger">OVERDUE</button>
+              <!-- <span
+              *ngIf="dataItem.closed_date < dataItem.deadline"
+              class="badge badge-danger"
+              >1 OVERDUE</span
+            > -->
+            </ng-template>
+          </kendo-grid-column>
+
+          <kendo-grid-column field="deadline" title="Deadline"> </kendo-grid-column>
+          <kendo-grid-column field="task" title="Task"> </kendo-grid-column>
+          <kendo-grid-column field="primary_asset_manager" title="Primary Asset Manager"> </kendo-grid-column>
+          <kendo-grid-column field="secondary_asset_manager" title="Secondary Asset Manager"> </kendo-grid-column>
+          <kendo-grid-column field="property_name" title="Property Name"> </kendo-grid-column>
+          <kendo-grid-column field="deal_stage" title="Deal Stage"> </kendo-grid-column>
+          <kendo-grid-column field="closed_date" title="Closed Date"> </kendo-grid-column>
+
+        </kendo-grid>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <!-- Team Task Tab End -->
+
+
+
+  </kendo-tabstrip>
+
+
+</div>

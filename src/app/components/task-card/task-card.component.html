@@ -1,0 +1,40 @@
+<!-- @for (list of lists; track list) {
+    <div class="card card--work">
+            <div class="container">
+                <h4>{{list.title}}</h4>
+                <p>{{list.count}}</p>
+                <span class="count {{list.colorClass}}">{{list.countLable}}</span>
+            </div> 
+    </div>
+} -->
+<div class="grid-layout-container">
+    <kendo-gridlayout
+      [gap]="{ rows: 6, cols: 20 }"
+      [rows]="[
+        { height: 250 }
+      ]"
+      [cols]="[{ width: '16%' }, { width: '16%' }, { width: '65%' }]"
+    >
+      <kendo-gridlayout-item [row]="1" [col]="1">
+        <div class="card card--work">
+            <div class="container">
+                <h4>{{lists[0].title}}</h4>
+                <p>{{lists[0].count}}</p>
+                <span class="count {{lists[0].colorClass}}">{{lists[0].countLable}}</span>
+            </div> 
+    </div>
+      </kendo-gridlayout-item>
+      <kendo-gridlayout-item [row]="1" [col]="2">
+        <div class="card card--work">
+            <div class="container">
+                <h4>{{lists[1].title}}</h4>
+                <p>{{lists[1].count}}</p>
+                <span class="count {{lists[1].colorClass}}">{{lists[1].countLable}}</span>
+            </div> 
+    </div>
+      </kendo-gridlayout-item>
+      <kendo-gridlayout-item [row]="1" [col]="3">
+        <asset-onboarding-card />
+      </kendo-gridlayout-item>
+    </kendo-gridlayout>
+</div>  

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { KENDO_GRID } from "@progress/kendo-angular-grid";
+import { AssetTreeComponent } from '../../../components/asset-tree/asset-tree.component';
 
 @Component({
   selector: 'app-registry',
   standalone: true,
-  imports: [LayoutModule, KENDO_GRID],
+  imports: [LayoutModule, KENDO_GRID, AssetTreeComponent],
   templateUrl: './registry.component.html',
   styleUrl: './registry.component.scss'
 })

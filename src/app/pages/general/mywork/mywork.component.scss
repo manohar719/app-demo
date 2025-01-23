@@ -1,0 +1,67 @@
+h2 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.work-wrapper {
+  padding: 2rem;
+}
+
+.card--assets {
+  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: inline-block;
+  text-align: center;
+  margin-right: 2rem;
+  vertical-align: top;
+ 
+
+  .container {
+    padding: 1rem;
+    background-color: #F7F7F8;
+    min-height: 32px;
+  }
+
+  p {
+    padding: 5px;
+    font-size: 3rem;
+    color: #007bc3;
+    margin-bottom: 0.8rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-align: start;
+    margin-top: 0.7rem;
+  }
+  span.count {
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 8px 15px;
+    font-weight: bold;
+  }
+
+  .color-yellow {
+    background-color: #ffd473;
+    color: black;
+  }
+  .color-red {
+    background-color: #871f24;
+    color: #fff;
+  }
+}
+
+kendo-tabstrip p {
+    margin: 0;
+    padding: 8px;
+  }
+
+  .cr-green{
+    background-color: #59823D;
+    color: #fff;
+}

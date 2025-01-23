@@ -1,0 +1,54 @@
+<div class="asset-tree-wrapper">
+    <div class="asset-tree">
+        <ul>
+            @for (asset of assetTreeObject; track asset.id) {
+            <li class="asset-list">
+                <h5><kendo-svg-icon [icon]="assetIcon"></kendo-svg-icon><span>{{asset.type}}</span></h5>
+                <h3 class="title">{{ asset.name }}</h3>
+                @if (asset.isEditable){
+                    <span class="edit-btn"><button kendoButton [svgIcon]="pencilIcon" class="cr-green"></button></span>
+                }
+                
+            <div class="action-btn-group">
+                @for (actionButton of asset.buttons; track actionButton.id){
+                    <span class="action-btn"><button kendoButton class="cr-green">{{actionButton.label}}</button></span>
+                }
+            </div>
+                   
+                
+            </li>
+            <ul>
+                @for (property of asset.nodes; track property.id) {
+                <li class="property-list">
+                    <h5><kendo-svg-icon [icon]="propertyIcon"></kendo-svg-icon><span>{{property.type}}</span></h5>
+                    <h3 class="title">{{ property.name }}</h3>
+                    @if (property.isEditable){
+                        <span class="edit-btn"><button kendoButton [svgIcon]="pencilIcon" class="cr-green"></button></span>
+                    }
+                    <div class="action-btn-group">
+                        @for (actionButton of property.buttons; track actionButton.id){
+                            <span class="action-btn"><button kendoButton class="cr-green">{{actionButton.label}}</button></span>
+                        }
+                    </div>
+                </li>
+                <ul>
+                    @for (building of property.nodes; track building.id) {
+                    <li class="building-list">
+                        <h5><kendo-svg-icon [icon]="buildingIcon"></kendo-svg-icon><span>{{building.type}}</span></h5>
+                        <h3 class="title">{{ building.name }}</h3>
+                        @if (building.isEditable){
+                            <span class="edit-btn"><button kendoButton [svgIcon]="pencilIcon" class="cr-green"></button></span>
+                        }
+                        @if (building.isDeletable){
+                            <span class="delete-btn"><button kendoButton [svgIcon]="deleteIcon" class="cr-green"></button></span>
+                        }
+                        
+                    </li>
+                    }
+                </ul>
+                }
+            </ul>
+            }
+        </ul>
+    </div>
+</div>
